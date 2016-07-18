@@ -1,48 +1,115 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Menu</title>
+<style>
 
-<div> 
+/********** Base styles **********/
+* {
+  	box-sizing: border-box;
+	text-align:left;
+	text-align: bottom;
+  	padding: 10px;
+  }
 
-  <div>Section 1</div>
 
-  <div>Section 2</div>
+h1 {
+  	margin-bottom: 15px;
+  	text-align: center;
+}
+
+p {
+	border: 1px solid black;
+	background-color: #A52A2A;
+	width: 90%;
+	height: 180px;
+	font-family: Helvetica;
+	color: #D7B839;
+	background-color: grey;
+
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+  Position: absolute;
   
-  <div>Section 3</div>
+}
+
+.cow-label {
+	Background-color:orange;
+	position:relative;
+	width:90px;
+	 
+	
+	}
+
+
+/********** Large devices only **********/
+
+@media (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3 {
+    float: left;
+    border: 1px black;
+	position:relative;
+
+  }
+  .col-lg-1 {
+    width: 33.33%;
+
+  }
+  .col-lg-2 {
+    width: 33.33%;
+  }
+  .col-lg-3 {
+    width: 33.33%;
+  }
+
+}
+
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2, .col-md-3 {
+    float: left;
+    border: 1px black;
+	position:relative;
+
+  }
+  .col-md-1 {
+    width: 50%;
+  }
+  .col-md-2 {
+    width: 50%;
+  }
+  .col-md-3 {
+    width: 100%;
+	
+  }
+
+}
+</style>
+</head>
+<body>
+
+<h1>Responsive Layout</h1>
+
+<div class="row">
+  <div class="col-lg-1 col-md-1 ">
+	<div class="cow-label">Cow Title</div>
+		<p>I cannot figure out how to position the title for this in a position that is always in the same place even after resizing the window.</p></div>
+<div class="col-lg-2 col-md-2 "><p>Chicken</p></div>
+  
+
+  <div class="col-lg-3 col-md-3 "><p>Pig</p></div>
+
+
+
 
 </div>
 
-<body>
 </body>
 </html>
-
-@media (min-widthe ) {
-  /* CSS Rules used when query matches */
-}
-
-min-width	Rules applied for any browser width over the value defined in the query.
-max-width	Rules applied for any browser width below the value defined in the query.
-min-height	Rules applied for any browser height over the value defined in the query.
-max-height	Rules applied for any browser height below the value defined in the query.
-orientation=portrait	Rules applied for any browser where the height is greater than or equal to the width.
-orientation=landscape	Rules for any browser where the width is greater than the height
-
-<link rel="stylesheet" media="(max-width: 640px)" href="max-640px.css">
-<link rel="stylesheet" media="(min-width: 640px)" href="min-640px.css">
-<link rel="stylesheet" media="(orientation: portrait)" href="portrait.css">
-<link rel="stylesheet" media="(orientation: landscape)" href="landscape.css">
-<style>
-  @media (min-width: 500px) and (max-width: 600px) {
-    h1 {
-      color: fuchsia;
-    }
-
-    .desc:after {
-      content:" In fact, it's between 500px and 600px wide.";
-    }
-  }
-</style>
